@@ -6,7 +6,7 @@ GxEPD2_BW <WatchyDisplay, WatchyDisplay::HEIGHT> Watchy::display(
         WatchyDisplay{});
 
 RTC_DATA_ATTR bool USB_PLUGGED_IN = false;
-RTC_DATA_ATTR int counter = 1;
+RTC_DATA_ATTR int counter = 0;
 
 void Watchy::init(String datetime) {
     esp_sleep_wakeup_cause_t wakeup_reason;
@@ -110,7 +110,7 @@ void Watchy::drawWatchFace() {
     display.println(currentTime.Minute);
     */
 
-    if (counter > 1440){
+    if (counter > 1439){
         counter = 0;
     }
 
