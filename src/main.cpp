@@ -1,6 +1,6 @@
-#include <Watchy.h>
+#include "face.h"
 
-Watchy test;
+ShrekWatchy test;
 
 void setup(){
     test.init();
