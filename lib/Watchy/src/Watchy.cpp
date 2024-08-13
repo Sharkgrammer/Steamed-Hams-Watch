@@ -6,6 +6,7 @@ GxEPD2_BW <WatchyDisplay, WatchyDisplay::HEIGHT> Watchy::display(
         WatchyDisplay{});
 
 RTC_DATA_ATTR bool USB_PLUGGED_IN = false;
+RTC_DATA_ATTR int counter = 1;
 
 void Watchy::init(String datetime) {
     esp_sleep_wakeup_cause_t wakeup_reason;
@@ -92,9 +93,9 @@ void Watchy::showWatchFace(bool partialRefresh) {
 }
 
 void Watchy::drawWatchFace() {
-    display.setFont(&DSEG7_Classic_Bold_53);
-
     display.fillScreen(GxEPD_WHITE);
+    /*
+    display.setFont(&DSEG7_Classic_Bold_53);
     display.setTextColor(GxEPD_BLACK);
 
     display.setCursor(5, 53 + 60);
@@ -107,4 +108,13 @@ void Watchy::drawWatchFace() {
         display.print("0");
     }
     display.println(currentTime.Minute);
+    */
+
+    if (counter > 1440){
+        counter = 0;
+    }
+
+    display.drawBitmap(0, 0, fmap[counter], 200, 200, GxEPD_BLACK);
+
+    counter += 1;
 }

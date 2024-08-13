@@ -20,6 +20,8 @@
 #include "esp_sntp.h"
 #include "hal/rtc_io_types.h"
 #include "driver/rtc_io.h"
+#include "frames.h"
+
 #define uS_TO_S_FACTOR 1000000ULL  //Conversion factor for micro seconds to seconds
 #define ADC_VOLTAGE_DIVIDER ((360.0f+100.0f)/360.0f) //Voltage divider at battery ADC
 
@@ -38,5 +40,7 @@ public:
 
     virtual void drawWatchFace();
 };
+
+extern RTC_DATA_ATTR int counter;
 
 #endif
