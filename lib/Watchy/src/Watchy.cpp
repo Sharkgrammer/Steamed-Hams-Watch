@@ -110,9 +110,12 @@ void Watchy::drawWatchFace() {
     display.println(currentTime.Minute);
     */
 
+    // Reset the counter to 0
     if (counter > 1439){
         counter = 0;
     }
+
+    // TODO find a way to reasonable alter the counter from the buttons
 
     display.drawBitmap(0, 0, fmap[counter], 200, 200, GxEPD_BLACK);
 
