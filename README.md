@@ -9,6 +9,6 @@ This actually technically tells the time. When not speed up, it shows a frame pe
 I used a program I wrote, [MovieFramer](https://github.com/Sharkgrammer/MovieFramer), to split steamed hams into 60*24 frames.
 
 # Youtube Demonstration
-[![Steamed Hams Video](https://img.youtube.com/vi/XeEITqNPDFY/0.jpg)](https://www.youtube.com/XeEITqNPDFY)
+[![Steamed Hams Video](https://img.youtube.com/vi/zyjujBA1eVk/0.jpg)](https://www.youtube.com/watch?v=zyjujBA1eVk)
 
-[Raw Link](https://www.youtube.com/watch?v=XeEITqNPDFY)
+[Raw Link](https://www.youtube.com/watch?v=zyjujBA1eVk)
